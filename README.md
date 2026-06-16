@@ -34,8 +34,18 @@ bakebox/
 │   ├── contact.css     # Styles unique to contact.html
 │   ├── login.css       # Styles unique to login.html
 │   └── register.css    # Styles unique to register.html
-│
-├── script.js              # Shared e-commerce & navigation logic
+|── js/
+│   ├── index.js
+│   ├── home.js
+│   ├── products.js
+│   ├── about.js
+│   ├── contact.js
+│   ├── login.js
+│   ├── register.js
+│   └── modules/
+│       ├── productsData.js
+│       ├── cart.js
+│       └── storage.js
 ├── LICENSE             # Project distribution license (MIT)
 └── README.md           # Technical documentation and layout guide
 
