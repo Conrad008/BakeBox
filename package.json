@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "install": "^0.13.0",
+    "jest": "^30.4.2"
+  }
+}
