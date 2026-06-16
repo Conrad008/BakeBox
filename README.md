@@ -121,7 +121,7 @@ Ensure you have installed all project dependencies before running the tests:
 1. **install Jest**
 
 ```bash
-npm install
+npm install --save-dev jest
 
 ```
 
