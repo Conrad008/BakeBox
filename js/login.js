@@ -33,6 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             clearInputError(passwordInput);
         }
-    })
+
+        if (!isValid) {
+            event.preventDefault();
+            return;
+        }
+
+        event.preventDefault();
+
+        const userSession = {
+            email: emailValue,
+            isLoggedIn: true,
+            loginTime: new Date().getTime()
+        };
+
+        try {
+            localStorage.setItem('BakeBox_Session', JSON.stringify(userSession))
+        } catch (error) {
+            console.error("failed to store user data", error)
+        }
+
+        window.location.href = 'index.html'
+    });
 
 })
