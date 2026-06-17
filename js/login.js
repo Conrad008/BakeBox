@@ -26,6 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         else{
             clearInputError(emailInput)
         }
+
+        if (passwordValue.length < 6) {
+            showInputError(passwordInput);
+            isValid = false;
+        } else {
+            clearInputError(passwordInput);
+        }
     })
 
 })
