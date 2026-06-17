@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let isValid = true;
 
-        const emailValue = emailInput.trim();
+        const emailValue = emailInput.value.trim();
         if (emailValue === ""){
             showInputError(emailInput)
             isValid = false
@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else{
             clearInputError(emailInput)
         }
+
+        const passwordValue = passwordInput.value
 
         if (passwordValue.length < 6) {
             showInputError(passwordInput);
@@ -39,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        event.preventDefault();
-
         const userSession = {
             email: emailValue,
             isLoggedIn: true,
@@ -53,7 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("failed to store user data", error)
         }
 
-        window.location.href = 'index.html'
+        window.location.href = 'home.html'
+    });
+
+    emailInput.addEventListener('input', () => {
+        if (emailInput.classList.contains('border-red-500')) {
+            clearInputError(emailInput);
+        }
+    });
+
+    passwordInput.addEventListener('input', () => {
+        if (passwordInput.classList.contains('border-red-500')) {
+            clearInputError(passwordInput);
+        }
     });
 
 })
