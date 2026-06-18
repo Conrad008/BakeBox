@@ -53,5 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
             phone: phoneValue,
             password: passwordValue
         };
-    })
+
+        users.push(newUser);
+
+        
+        localStorage.setItem('bakebox_users', JSON.stringify(users));
+
+        
+        successMessage.classList.remove('hidden');
+
+        registerForm.reset();
+
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 2000);
+    });
 });
