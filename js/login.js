@@ -41,8 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const users = JSON.parse(localStorage.getItem('bakebox_users')) || [];
+
+        const matchedUser = users.find(user => user.email === emailValue);
+
+        if (!matchedUser) {
+            // User doesn't exist
+            showInputError(emailInput);
+            emailInput.setCustomValidity("No account found with this email.");
+            emailInput.reportValidity();
+            return;
+        }
+
+        if (matchedUser.password !== passwordValue) {
+            // Password incorrect
+            showInputError(passwordInput);
+            passwordInput.setCustomValidity("Incorrect password. Try again");
+            passwordInput.reportValidity();
+            return;
+        }
+
         const userSession = {
-            email: emailValue,
+            id: matchedUser.id,           
+            name: matchedUser.name,       
+            email: matchedUser.email,
             isLoggedIn: true,
             loginTime: new Date().getTime()
         };
