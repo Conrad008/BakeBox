@@ -7,7 +7,7 @@
   "category": "cakes", 
   "price": 28.00,
   "rating": 9.2, 
-  "image": "images/espresso-cake.jpg" 
+  "image": "/assets/images/espressocake.jpg" 
 
   },
 
@@ -18,7 +18,7 @@
    "category": "cakes", 
    "price": 32.50, 
    "rating": 8.9,
-   "image": "images/strawberry-victoria.jpg" 
+   "image": "/assets/images/strawberrycake.jpg" 
 
   },
 
@@ -28,7 +28,7 @@
   "name": "Dark Chocolate Ganache Cake", 
   "category": "cakes", 
   "price": 35.00, "rating": 9.6, 
-  "image": "images/chocolate-ganache.jpg"
+  "image": "/assets/images/chocolatecake.jpg"
 
   },
 
@@ -39,7 +39,7 @@
   "category": "cakes", 
   "price": 18.50, 
   "rating": 8.7, 
-  "image": "images/lemon-elderflower.jpg" 
+  "image": "/assets/images/lemonloaf.jpg" 
 
   },
 
@@ -50,8 +50,8 @@
   "category": "cakes", 
   "price": 26.00, 
   "rating": 9.1, 
-  "image": "images/carrot-cake.jpg" 
-  
+  "image": "/assets/images/carrotcake.jpg" 
+
   },
 
   { 
@@ -61,7 +61,7 @@
   "category": "cakes", 
   "price": 30.00, 
   "rating": 9.4, 
-  "image": "images/salted-caramel.jpg" 
+  "image": "/assets/images/saltedcaramelcake.jpg" 
 
   },
 
@@ -71,7 +71,7 @@
     "category": "cakes", 
     "price": 29.00, 
     "rating": 8.8, 
-    "image": "images/red-velvet.jpg" 
+    "image": "/assets/images/redvelvet.jpg" 
   },
 
   { 
@@ -81,7 +81,7 @@
   "category": "cakes", 
   "price": 24.50, 
   "rating": 9.0, 
-  "image": "images/honey-almond.jpg" 
+  "image": "/assets/images/honeycake.jpg" 
 
   },
 
@@ -91,7 +91,7 @@
   "name": "Matcha Green Tea Mille Crêpe", 
   "category": "cakes", 
   "price": 38.00, "rating": 9.3, 
-  "image": "images/matcha-crepe.jpg" 
+  "image": "/assets/images/matchacrepe.jpg" 
 
   },
 
@@ -102,7 +102,7 @@
   "category": "cakes", 
   "price": 22.00, 
   "rating": 8.5, 
-  "image": "images/apple-galette.jpg"
+  "image": "/assets/images/applecake.jpg"
 
   },
 
@@ -112,7 +112,7 @@
     "name": "Wild Blueberry Crumble Muffin", 
     "category": "muffins", "price": 4.25, 
     "rating": 9.5, 
-    "image":"images/blueberry-muffin.jpg" 
+    "image":"/assets/images/blueberrymuffin.jpg" 
 
   },
 
@@ -122,7 +122,7 @@
     "name": "Double Chocolate Chunk Muffin", 
     "category": "muffins", "price": 4.50, 
     "rating": 9.3, 
-    "image": "images/chocolate-muffin.jpg" 
+    "image": "/assets/images/chocolatemuffin.jpg" 
 
   },
 
@@ -132,7 +132,7 @@
     "category": "muffins", 
     "price": 4.25, 
     "rating": 8.9, 
-    "image": "images/banana-muffin.jpg" 
+    "image": "/assets/images/bannanamuffin.jpg" 
   },
 
   { 
@@ -142,7 +142,7 @@
   "category": "muffins", 
   "price": 4.00, 
   "rating": 9.0, 
-  "image": "images/lemon-muffin.jpg" 
+  "image": "/assets/images/lemonmuffin.jpg" 
 
   },
 
@@ -152,7 +152,7 @@
     "category": "muffins", 
     "price": 4.50, 
     "rating": 8.6, 
-    "image": "images/apple-muffin.jpg" 
+    "image": "/assets/images/applemuffin.jpg" 
 
   },
 
@@ -162,7 +162,7 @@
   "name": "Zucchini Spice Muffin", 
   "category": "muffins", "price": 3.75, 
   "rating": 8.2, 
-  "image": "images/zucchini-muffin.jpg"
+  "image": "/assets/images/zuchinnimuffin.jpg"
 
   },
 
@@ -173,7 +173,7 @@
   "category": "muffins", 
   "price": 4.75, 
   "rating": 9.4, 
-  "image": "images/raspberry-muffin.jpg" 
+  "image": "/assets/images/raspberrymuffin.jpg" 
 
   },
 
@@ -183,7 +183,7 @@
   "category": "muffins", 
   "price": 4.50, 
   "rating": 9.1, 
-  "image": "images/pumpkin-muffin.jpg"
+  "image": "/assets/images/pumpkinmuffin.jpg"
 
   },
 
@@ -194,7 +194,7 @@
     "name": "Cranberry Orange Zest Muffin", 
     "category": "muffins", "price": 4.25, 
     "rating": 8.8, 
-    "image": "images/cranberry-muffin.jpg" 
+    "image": "/assets/images/orangemuffin.jpg" 
 
   },
 
@@ -205,7 +205,7 @@
     "category": "muffins", 
     "price": 3.50, 
     "rating": 8.0, 
-    "image": "images/bran-muffin.jpg" 
+    "image": "/assets/images/rasinmuffin.jpg" 
 
   },
 
@@ -214,8 +214,9 @@
     "id": "p1", 
     "name": "Signature Country Sourdough", 
     "category": "pastries", 
-    "price": 8.50, "rating": 9.8, 
-    "image": "images/country-sourdough.jpg" 
+    "price": 8.50, 
+    "rating": 9.8, 
+    "image": "/assets/images/sourdough.jpg" 
 
   },
 
@@ -226,7 +227,7 @@
   "category": "pastries", 
   "price": 3.75, 
   "rating": 9.7, 
-  "image": "images/butter-croissant.jpg" 
+  "image": "/assets/images/croissant.jpg" 
 },
 
   { 
@@ -235,7 +236,7 @@
     "category": "pastries", 
     "price": 4.25, 
     "rating": 9.5, 
-    "image": "images/pain-au-chocolat.jpg" 
+    "image": "/assets/images/painauchocolat.jpg" 
   },
 
   { 
@@ -245,7 +246,7 @@
     "category": "pastries", 
     "price": 7.00, 
     "rating": 9.2, 
-    "image": "images/rosemary-focaccia.jpg" 
+    "image": "/assets/images/rosmary.jpg" 
   },
 
   { 
@@ -255,18 +256,18 @@
     "category": "pastries", 
     "price": 4.75, 
     "rating": 9.6, 
-    "image": "images/almond-croissant.jpg" 
+    "image": "/assets/images/almondcroissant.jpg" 
 
   },
 
   { 
 
     "id": "p6", 
-    "name": "Cinnamon Brioche Swirl", 
+    "name": "Cinnamon roll", 
     "category": "pastries", 
     "price": 5.00, 
     "rating": 9.1, 
-    "image": "images/cinnamon-swirl.jpg"
+    "image": "/assets/images/cinnamonroll.jpg"
 
 },
 
@@ -277,7 +278,7 @@
   "category": "pastries", 
   "price": 9.00, 
   "rating": 8.9, 
-  "image": "images/olive-flatbread.jpg" 
+  "image": "/assets/images/oliveflatbread.jpg" 
 
   },
 
@@ -288,7 +289,7 @@
   "category": "pastries", 
   "price": 4.50, 
   "rating": 9.4, 
-  "image": "images/cardamom-bun.jpg" 
+  "image": "/assets/images/cardamonbun.jpg" 
 
   },
 
@@ -299,7 +300,7 @@
   "category": "pastries", 
   "price": 7.50, 
   "rating": 8.7, 
-  "image": "images/multigrain-loaf.jpg"
+  "image": "/assets/images/multigrain.jpg"
 
  },
 
@@ -310,7 +311,7 @@
     "category": "pastries", 
     "price": 3.50, 
     "rating": 9.3, 
-    "image": "images/french-baguette.jpg" 
+    "image": "/assets/images/baguette.jpg" 
 
   }
 
