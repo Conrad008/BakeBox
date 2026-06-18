@@ -20,4 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
             eyeIcon.className = "fa-regular fa-eye text-base";
         }
     });
+
+    registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        successMessage.classList.add('hidden');
+
+        const emailValue = emailInput.value.trim().toLowerCase();
+        const nameValue = nameInput.value.trim();
+        const phoneValue = phoneInput.value.trim();
+        const passwordValue = passwordInput.value;
+
+        const users = JSON.parse(localStorage.getItem('bakebox_users')) || [];
+    })
 });
