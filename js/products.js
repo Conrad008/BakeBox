@@ -71,17 +71,37 @@ function cartListeners(products){
             if(targetProduct){
                 addToCart(targetProduct);
 
-                const originalText = button.textContent;
-                button.textContent = 'Added successfully!';
+                button.textContent = 'Added!';
                 button.classList.replace('bg-amber-600', 'bg-emerald-600');
                 button.disabled = true;
 
                 setTimeout(() => {
-                    button.textContent = originalText;
+                    button.textContent = 'Add to cart';
                     button.classList.replace('bg-emerald-600', 'bg-amber-600');
                     button.disabled = false;
                 },1000)
             }
         });
     });
+}
+
+function addToCart(product) {
+    
+    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || [];
+
+   
+    const existingItem = cart.find(item => item.id === product.id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+
+    
+    localStorage.setItem('BakeBox_Cart', JSON.stringify(cart));
 }
