@@ -26,7 +26,7 @@ function renderProducts (products, gridElement){
     products.forEach(product => {
         const card = document.createElement('div');
 
-        card.className = "bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden flex flex-col justify-between transition transform hover:-translate-y-1 hover:shadow-md duration-300";
+        card.className = "bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden flex flex-col justify-between transition transform hover:-translate-y-1 hover:shadow-md duration-300 animate-fadeIn";
 
         card.innerHTML = `
         <div>
