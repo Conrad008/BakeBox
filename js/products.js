@@ -56,4 +56,32 @@ function renderProducts (products, gridElement){
         gridElement.appendChild(card);
     });
 
+    cartListeners(products);
+
+}
+
+function cartListeners(products){
+    const buttons = document.querySelectorAll('.add-to-cart-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const productId = e.target.getAttribute('data-id');
+            const targetProduct = products.find(p => p.id === productId);
+
+            if(targetProduct){
+                addToCart(targetProduct);
+
+                const originalText = button.textContent;
+                button.textContent = 'Added successfully!';
+                button.classList.replace('bg-amber-600', 'bg-emerald-600');
+                button.disabled = true;
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.replace('bg-emerald-600', 'bg-amber-600');
+                    button.disabled = false;
+                },1000)
+            }
+        });
+    });
 }
