@@ -17,3 +17,13 @@ body::before {
     z-index: 0;
     pointer-events: none;
 }
+
+.login-bg-gradient{
+    background-color: #FDFBF7;
+    background-image: radial-gradient(
+        ellipse at top right,
+        rgba(217, 119, 6, 0.18) 0%,   
+        rgba(253, 251, 247, 0.5) 50%,  
+        #FDFBF7 100%                 
+    );
+}
