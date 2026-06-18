@@ -9,4 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const eyeIcon = document.getElementById('eyeIcon');
     const successMessage = document.getElementById('formSuccess');
 
+    togglePasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === "password"
+
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+
+        if (isPassword) {
+            eyeIcon.className = "fa-regular fa-eye-slash text-base";
+        } else {
+            eyeIcon.className = "fa-regular fa-eye text-base";
+        }
+    });
 });
