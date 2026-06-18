@@ -32,5 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const passwordValue = passwordInput.value;
 
         const users = JSON.parse(localStorage.getItem('bakebox_users')) || [];
+
+        const emailExists = users.some(user => user.email === emailValue)
+
+        if (emailExists) {
+            emailInput.setCustomValidity("This email is already registered.");
+            emailInput.reportValidity();
+            
+            emailInput.addEventListener('input', function clearValid() {
+                emailInput.setCustomValidity("");
+                emailInput.removeEventListener('input', clearValid);
+            });
+            return;
+        }
+
+        const newUser = {
+            id: Date.now(), 
+            name: nameValue,
+            email: emailValue,
+            phone: phoneValue,
+            password: passwordValue
+        };
     })
 });
