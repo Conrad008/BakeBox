@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function renderCart (){
-    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart'));
+    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || {};
     const container = document.getElementById('cartItemsContainer');
     const badge = document.getElementById('cartCountBadge')
 
@@ -89,3 +89,20 @@ function renderCart (){
     updateBillTotals(runningBillSum);
     toggleCheckoutButtonState(true);
 }
+
+window.adjustItemQuantity = function(id, balanceMod){
+    let cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || {};
+
+    const targetedItem = cart.find(item => item.id === id);
+
+    if(targetedItem){
+        targetedItem.quantity += balanceMod;
+
+        if (targetedItem.quantity <= 0) {
+            cart = cart.filter(item => item.id !== id);
+        }
+        localStorage.setItem('BakeBox_Cart', JSON.stringify(cart));
+        renderCart();
+    }
+    
+};
