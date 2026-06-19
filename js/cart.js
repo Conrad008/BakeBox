@@ -106,3 +106,24 @@ window.adjustItemQuantity = function(id, balanceMod){
     }
     
 };
+
+window.removeCartItem = function(id) {
+    let cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || [];
+    cart = cart.filter(item => item.id !== id);
+    localStorage.setItem('BakeBox_Cart', JSON.stringify(cart));
+    renderCart();
+};
+
+function updateBillTotals(amount) {
+    document.getElementById('summarySubtotal').textContent = `KSH ${amount.toFixed(2)}`;
+    document.getElementById('summaryTotal').textContent = `KSH ${amount.toFixed(2)}`;
+}
+
+function toggleCheckoutButtonState(hasItems) {
+    const btn = document.getElementById('primaryCartBtn');
+    if (!btn) return;
+    btn.disabled = !hasItems;
+    if (!hasItems) btn.classList.add('opacity-50', 'cursor-not-allowed');
+    else btn.classList.remove('opacity-50', 'cursor-not-allowed');
+}
+
