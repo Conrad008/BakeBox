@@ -127,3 +127,35 @@ function toggleCheckoutButtonState(hasItems) {
     else btn.classList.remove('opacity-50', 'cursor-not-allowed');
 }
 
+function setupCheckoutController() {
+    const checkoutForm = document.getElementById('checkoutForm');
+    const primaryCartBtn = document.getElementById('primaryCartBtn');
+
+    if (!primaryCartBtn || !checkoutForm) return;
+
+    let processStep = 'review';
+
+    primaryCartBtn.addEventListener('click', (e) => {
+        if (processStep === 'review') {
+            checkoutForm.classList.remove('hidden');
+            checkoutForm.classList.add('animate-fadeIn');
+            primaryCartBtn.textContent = 'Submit Order Payment';
+            processStep = 'payment';
+        } else if (processStep === 'payment') {
+            
+            if (!checkoutForm.checkValidity()) {
+                checkoutForm.reportValidity();
+                return;
+            }
+
+            primaryCartBtn.disabled = true;
+            primaryCartBtn.innerHTML = `<i class="fa-solid fa-circle-notch animate-spin mr-2"></i>Processing Payment...`;
+
+            setTimeout(() => {
+                alert('Success! Your card was charged. The bakers are preheating the ovens right now!');
+                localStorage.removeItem('BakeBox_Cart'); 
+                window.location.href = 'home.html';      
+            }, 2000);
+        }
+    });
+}
