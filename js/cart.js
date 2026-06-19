@@ -81,4 +81,11 @@ function renderCart (){
         `;
         container.appendChild(row);
     });
+
+    if (badge) {
+        badge.textContent = badgeTotalCount;
+        badge.classList.remove('hidden');
+    }
+    updateBillTotals(runningBillSum);
+    toggleCheckoutButtonState(true);
 }
