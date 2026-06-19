@@ -53,6 +53,46 @@
         </div>
 
     </header>
-    
+    <main class="flex-grow max-w-7xl w-full mx-auto px-6 md:px-12 py-12 animate-fadeIn">
+        <h1 class="text-3xl md:text-4xl font-bold font-customFont mb-8">
+            Your basket
+            <span class="text-thirdPalette">.</span>
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div id="cartItemsContainer" class="lg:col-span-2 space-y-4">
+
+            </div>
+
+            <div class="bg-white border border-stone-200 p-6 rounded-xl shadow-sm space-y-6">
+                <h2 class="text-xl font-bold text-stone-800 border-b border-stone-100 pb-3"> Your Order</h2>
+
+                <div class="space-y-3 text-sm font-medium">
+                    <div class="flex justify-between text-stone-500">
+                        <span>Subtotal</span>
+                        <span id="summarySubtotal">$0.00</span>
+                    </div>
+
+                    <div class="flex justify-between text-stone-500">
+                        <span>Delivery</span>
+                        <span class="text-emerald-600 font-semibold">FREE</span>
+                    </div>
+
+                    <hr class="border-stone-100">
+
+                    <div class="flex justify-between text-lg font-bold text-stone-900 pt-1">
+                        <span>Total Bill</span>
+                        <span id="summaryTotal">KSH 0.00</span>
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </main>
 </body>
 </html>
