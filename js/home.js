@@ -14,6 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCountBadge();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+
+    if(mobileMenuBtn && mobileMenuDrawer){
+        mobileMenuBtn.addEventListener('click', () => {
+
+            mobileMenuDrawer.classList.toggle('hidden');
+
+            console.log('Menu toggled! Current classes:', mobileMenuDrawer.className);
+        });
+    } else{
+        console.warn('menu links not found');
+    }
+});
+
 async function initDashboardSystem() {
     const featuredGrid = document.getElementById('featuredGrid');
     const searchInput = document.getElementById('dashboardSearch');
@@ -166,5 +182,15 @@ function updateCartCountBadge() {
         badge.classList.remove('hidden');
     } else {
         badge.classList.add('hidden');
+    }
+}
+
+function setupLogoutController() {
+    const btn = document.getElementById('logoutBtn');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            localStorage.removeItem('BakeBox_Session');
+            window.location.href = 'index.html';
+        });
     }
 }
