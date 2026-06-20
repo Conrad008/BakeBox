@@ -38,3 +38,33 @@ async function initDashboardSystem() {
         if (featuredGrid) featuredGrid.innerHTML = `<p class="text-red-500 col-span-full text-center">Failed to fetch daily features menu loop.</p>`;
     }
 }
+
+function renderFeaturedMenu(items, gridElement){
+    if(!gridElement) return;
+
+    gridElement.innerHTML = '';
+
+    items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-white border border-stone-200/60 rounded-xl overflow-hidden shadow-sm flex flex-col justify-between hover:shadow-md transition duration-200 animate-fadeIn";
+        card.innerHTML = `
+            <div>
+                <div class="h-44 w-full relative overflow-hidden bg-stone-50">
+                    <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">
+                    <span class="absolute top-2 right-2 bg-amber-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded"><i class="fa-solid fa-star"></i> ${item.rating}</span>
+                </div>
+                <div class="p-4">
+                    <span class="text-[10px] font-bold tracking-widest text-amber-600 uppercase">${item.category}</span>
+                    <h3 class="font-bold text-stone-800 text-base mt-0.5 leading-tight">${item.name}</h3>
+                </div>
+            </div>
+            <div class="p-4 pt-0 flex items-center justify-between">
+                <span class="font-black text-stone-900">KSH ${item.price.toFixed(2)}</span>
+                <button onclick="handleDashboardAddToCart('${item.id}', this)" class="bg-thirdPalette hover:bg-amber-700 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-colors">
+                    Add to Cart
+                </button>
+            </div>
+        `;
+        gridElement.appendChild(card);
+    });
+}
