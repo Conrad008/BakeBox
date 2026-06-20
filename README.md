@@ -26,14 +26,10 @@ bakebox/
 ├── register.html       # User account creation portal
 │
 ├── css/                # Centralized folder for styles
-│   ├── global.css      # Shared design tokens (colors, typography, navbar, footer)
 │   ├── index.css       # Styles unique to index.html
-│   ├── home.css        # Styles unique to home.html
 │   ├── products.css    # Styles unique to products.html
-│   ├── about.css       # Styles unique to about.html
-│   ├── contact.css     # Styles unique to contact.html
-│   ├── login.css       # Styles unique to login.html
-│   └── register.css    # Styles unique to register.html
+│   └── login.css       # Styles unique to login.html
+│  
 |── js/
 │   ├── index.js
 │   ├── home.js
@@ -43,7 +39,7 @@ bakebox/
 │   ├── login.js
 │   ├── register.js
 │   └── modules/
-│       ├── productsData.js
+│       ├── products.json
 │       ├── cart.js
 │       └── storage.js
 ├── LICENSE             # Project distribution license (MIT)
