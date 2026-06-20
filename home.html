@@ -63,5 +63,28 @@
 
     </header>
     
+    <main class="flex-grow max-w-7xl w-full mx-auto px-6 md:px-12 py-12 space-y-16">
+        <div class="bg-white border border-stone-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 animate-fadeIn">
+            <div class="space-y-3 text-center md:text-left">
+                <h1 id="userGreeting" class="text-3xl md:text-5xl font-bold font-customFont text-secondaryPalette">
+                    Welcome back, <span class="text-thirdPalette italic">Guest</span>!
+                </h1>
+                <p class="text-stone-600 max-w-md">Ready for another artisan delivery? Explore your dashboard or find your favorite treats instantly below.</p>
+            </div>
+
+            <div class="w-full md:max-w-md relative">
+                <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-2">Search the baskets</label>
+                <div class="relative">
+                    <input type="text" id="dashboardSearch" placeholder="Search cakes, muffins, pastries..." class="w-full bg-stone-50 border border-stone-200 rounded-xl py-3 pl-11 pr-4 text-sm focus:ring-1 focus:ring-thirdPalette focus:border-thirdPalette outline-none transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+                </div>
+
+                <div id="searchResultsDropdown" class="absolute left-0 right-0 mt-2 bg-white border border-stone-200 rounded-xl shadow-lg overflow-hidden max-h-60 overflow-y-auto hidden z-40 animate-fadeIn"></div>
+
+            </div>
+
+        </div>
+
+    </main>
 </body>
 </html>
