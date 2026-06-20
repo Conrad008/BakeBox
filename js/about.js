@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             badge.classList.remove('hidden');
         }
     }
-
-});
-
-document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
 
