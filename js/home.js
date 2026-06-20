@@ -51,7 +51,7 @@ function renderFeaturedMenu(items, gridElement){
             <div>
                 <div class="h-44 w-full relative overflow-hidden bg-stone-50">
                     <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">
-                    <span class="absolute top-2 right-2 bg-amber-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded"><i class="fa-solid fa-star"></i> ${item.rating}</span>
+                    <span class="absolute top-2 right-2 bg-amber-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">${item.rating}</span>
                 </div>
                 <div class="p-4">
                     <span class="text-[10px] font-bold tracking-widest text-amber-600 uppercase">${item.category}</span>
@@ -66,5 +66,60 @@ function renderFeaturedMenu(items, gridElement){
             </div>
         `;
         gridElement.appendChild(card);
+    });
+}
+
+function setupLiveSearch(allProducts, searchInput, dropdown) {
+    if (!searchInput || !dropdown) return;
+
+    searchInput.addEventListener('input', (e) => {
+        const keyword = e.target.value.trim().toLowerCase();
+        
+        if (keyword === '') {
+            dropdown.classList.add('hidden');
+            return;
+        }
+
+        const matches = allProducts.filter(p => 
+            p.name.toLowerCase().includes(keyword) || 
+            p.category.toLowerCase().includes(keyword)
+        );
+
+        if (matches.length === 0) {
+            dropdown.innerHTML = `<div class="p-4 text-xs text-stone-400 font-medium italic text-center">No matching pastries baking today...</div>`;
+        } else {
+            dropdown.innerHTML = '';
+            matches.forEach(match => {
+                const matchRow = document.createElement('div');
+                matchRow.className = "p-3 border-b border-stone-50 hover:bg-amber-50/50 cursor-pointer flex items-center justify-between text-sm transition-colors";
+                matchRow.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${match.image}" class="w-8 h-8 rounded object-cover bg-stone-100">
+                        <div>
+                            <p class="font-semibold text-stone-800 leading-tight">${match.name}</p>
+                            <p class="text-[10px] font-bold text-amber-600 uppercase mt-0.5">${match.category}</p>
+                        </div>
+                    </div>
+                    <span class="font-black text-stone-900 text-xs">KSH ${match.price.toFixed(2)}</span>
+                `;
+                
+                matchRow.addEventListener('click', () => {
+                    executeLocalCartPush(match);
+                    searchInput.value = '';
+                    dropdown.classList.add('hidden');
+                    alert(`Added ${match.name} to basket!`);
+                    updateCartCountBadge();
+                });
+
+                dropdown.appendChild(matchRow);
+            });
+        }
+        dropdown.classList.remove('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.add('hidden');
+        }
     });
 }
