@@ -154,3 +154,17 @@ function executeLocalCartPush(product) {
 
     localStorage.setItem('BakeBox_Cart', JSON.stringify(cart));
 }
+
+function updateCartCountBadge() {
+    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || [];
+    const badge = document.getElementById('cartCountBadge');
+    if (!badge) return;
+
+    const tally = cart.reduce((sum, current) => sum + current.quantity, 0);
+    if (tally > 0) {
+        badge.textContent = tally;
+        badge.classList.remove('hidden');
+    } else {
+        badge.classList.add('hidden');
+    }
+}
