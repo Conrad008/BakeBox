@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     fetchProducts(productsGrid);
+    updateCartBadge();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
 
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else{
         console.warn('menu links not found');
     }
-});
+
 
 async function fetchProducts(gridElement){
     if (!gridElement) return;
@@ -120,4 +121,21 @@ function addToCart(product) {
 
     
     localStorage.setItem('BakeBox_Cart', JSON.stringify(cart));
+    updateCartBadge();
+}
+
+function updateCartBadge() {
+    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || [];
+    const badge = document.getElementById('cartCountBadge');
+    
+    if (!badge) return;
+
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+    if (totalItems > 0) {
+        badge.textContent = totalItems;
+        badge.classList.remove('hidden'); 
+    } else {
+        badge.classList.add('hidden'); 
+    }
 }
