@@ -123,3 +123,34 @@ function setupLiveSearch(allProducts, searchInput, dropdown) {
         }
     });
 }
+
+window.handleDashboardAddToCart = function(id, buttonEl) {
+    fetch('products.json')
+        .then(res => res.json())
+        .then(products => {
+            const targetedItem = products.find(p => p.id === id);
+            if (targetedItem) {
+                executeLocalCartPush(targetedItem);
+                updateCartCountBadge();
+
+                const oldTxt = buttonEl.textContent;
+                buttonEl.textContent = 'Added';
+                buttonEl.classList.replace('bg-thirdPalette', 'bg-emerald-600');
+                
+                setTimeout(() => {
+                    buttonEl.textContent = oldTxt;
+                    buttonEl.classList.replace('bg-emerald-600', 'bg-thirdPalette');
+                }, 1000);
+            }
+        });
+};
+
+function executeLocalCartPush(product) {
+    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || [];
+    const matchedIdx = cart.find(item => item.id === product.id);
+
+    if (matchedIdx) matchedIdx.quantity += 1;
+    else cart.push({ ...product, quantity: 1 });
+
+    localStorage.setItem('BakeBox_Cart', JSON.stringify(cart));
+}
