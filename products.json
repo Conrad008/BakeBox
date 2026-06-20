@@ -5,7 +5,7 @@
   "id": "c1", 
   "name": "Classic Espresso Cake", 
   "category": "cakes", 
-  "price": 28.00,
+  "price": 3640,
   "rating": 9.2, 
   "image": "/assets/images/espressocake.jpg" 
 
@@ -16,7 +16,7 @@
    "id": "c2",
    "name": "Artisan Strawberry Victoria", 
    "category": "cakes", 
-   "price": 32.50, 
+   "price": 5000, 
    "rating": 8.9,
    "image": "/assets/images/strawberrycake.jpg" 
 
@@ -27,7 +27,8 @@
   "id": "c3", 
   "name": "Dark Chocolate Ganache Cake", 
   "category": "cakes", 
-  "price": 35.00, "rating": 9.6, 
+  "price": 4550, 
+  "rating": 9.6, 
   "image": "/assets/images/chocolatecake.jpg"
 
   },
@@ -37,7 +38,7 @@
   "id": "c4", 
   "name": "Lemon Elderflower Loaf Cake", 
   "category": "cakes", 
-  "price": 18.50, 
+  "price": 2400, 
   "rating": 8.7, 
   "image": "/assets/images/lemonloaf.jpg" 
 
@@ -48,7 +49,7 @@
   "id": "c5", 
   "name": "Spiced Carrot & Walnut Cake", 
   "category": "cakes", 
-  "price": 26.00, 
+  "price": 3380, 
   "rating": 9.1, 
   "image": "/assets/images/carrotcake.jpg" 
 
@@ -59,7 +60,7 @@
   "id": "c6", 
   "name": "Salted Caramel Tart Cake", 
   "category": "cakes", 
-  "price": 30.00, 
+  "price": 3900, 
   "rating": 9.4, 
   "image": "/assets/images/saltedcaramelcake.jpg" 
 
@@ -69,7 +70,7 @@
     "id": "c7", 
     "name": "Red Velvet Crumb Cake", 
     "category": "cakes", 
-    "price": 29.00, 
+    "price": 3770, 
     "rating": 8.8, 
     "image": "/assets/images/redvelvet.jpg" 
   },
@@ -79,7 +80,7 @@
   "id": "c8", 
   "name": "Honey Almond Sponge Cake", 
   "category": "cakes", 
-  "price": 24.50, 
+  "price": 3190, 
   "rating": 9.0, 
   "image": "/assets/images/honeycake.jpg" 
 
@@ -90,7 +91,8 @@
   "id": "c9", 
   "name": "Matcha Green Tea Mille Crêpe", 
   "category": "cakes", 
-  "price": 38.00, "rating": 9.3, 
+  "price": 4940, 
+  "rating": 9.3, 
   "image": "/assets/images/matchacrepe.jpg" 
 
   },
@@ -100,7 +102,7 @@
   "id": "c10", 
   "name": "Rustic Apple Cinnamon Galette", 
   "category": "cakes", 
-  "price": 22.00, 
+  "price": 2860, 
   "rating": 8.5, 
   "image": "/assets/images/applecake.jpg"
 
@@ -109,8 +111,9 @@
   { 
 
     "id": "m1", 
-    "name": "Wild Blueberry Crumble Muffin", 
-    "category": "muffins", "price": 4.25, 
+    "name": "Wild Blueberry Crumble Muffins", 
+    "category": "muffins", 
+    "price": 650, 
     "rating": 9.5, 
     "image":"/assets/images/blueberrymuffin.jpg" 
 
@@ -119,8 +122,9 @@
   { 
 
     "id": "m2", 
-    "name": "Double Chocolate Chunk Muffin", 
-    "category": "muffins", "price": 4.50, 
+    "name": "Double Chocolate Chunk Muffins", 
+    "category": "muffins", 
+    "price": 600, 
     "rating": 9.3, 
     "image": "/assets/images/chocolatemuffin.jpg" 
 
@@ -128,9 +132,9 @@
 
   { 
     "id": "m3", 
-    "name": "Banana Walnut Streusel Muffin", 
+    "name": "Banana Walnut Streusel Muffins", 
     "category": "muffins", 
-    "price": 4.25, 
+    "price": 550, 
     "rating": 8.9, 
     "image": "/assets/images/bannanamuffin.jpg" 
   },
@@ -138,9 +142,9 @@
   { 
 
   "id": "m4", 
-  "name": "Lemon Poppyseed Glazed Muffin", 
+  "name": "Lemon Poppyseed Glazed Muffins", 
   "category": "muffins", 
-  "price": 4.00, 
+  "price": 520, 
   "rating": 9.0, 
   "image": "/assets/images/lemonmuffin.jpg" 
 
@@ -148,9 +152,9 @@
 
   { 
     "id": "m5", 
-    "name": "Apple Crisp Muffin", 
+    "name": "Apple Crisp Muffins", 
     "category": "muffins", 
-    "price": 4.50, 
+    "price": 585, 
     "rating": 8.6, 
     "image": "/assets/images/applemuffin.jpg" 
 
@@ -159,8 +163,9 @@
   { 
     
   "id": "m6", 
-  "name": "Zucchini Spice Muffin", 
-  "category": "muffins", "price": 3.75, 
+  "name": "Zucchini Spice Muffins", 
+  "category": "muffins",
+  "price": 480, 
   "rating": 8.2, 
   "image": "/assets/images/zuchinnimuffin.jpg"
 
@@ -169,9 +174,9 @@
   { 
     
   "id": "m7", 
-  "name": "Raspberry White Chocolate Muffin", 
+  "name": "Raspberry White Chocolate Muffins", 
   "category": "muffins", 
-  "price": 4.75, 
+  "price": 480, 
   "rating": 9.4, 
   "image": "/assets/images/raspberrymuffin.jpg" 
 
@@ -179,9 +184,9 @@
 
   { 
   "id": "m8", 
-  "name": "Pumpkin Pecan Harvest Muffin", 
+  "name": "Pumpkin Pecan Harvest Muffins", 
   "category": "muffins", 
-  "price": 4.50, 
+  "price": 585, 
   "rating": 9.1, 
   "image": "/assets/images/pumpkinmuffin.jpg"
 
@@ -191,8 +196,9 @@
   { 
 
     "id": "m9", 
-    "name": "Cranberry Orange Zest Muffin", 
-    "category": "muffins", "price": 4.25, 
+    "name": "Cranberry Orange Zest Muffins", 
+    "category": "muffins", 
+    "price": 480, 
     "rating": 8.8, 
     "image": "/assets/images/orangemuffin.jpg" 
 
@@ -201,9 +207,9 @@
   { 
 
     "id": "m10", 
-    "name": "Bran & Golden Raisin Muffin", 
+    "name": "Bran & Golden Raisin Muffins", 
     "category": "muffins", 
-    "price": 3.50, 
+    "price": 450, 
     "rating": 8.0, 
     "image": "/assets/images/rasinmuffin.jpg" 
 
@@ -214,7 +220,7 @@
     "id": "p1", 
     "name": "Signature Country Sourdough", 
     "category": "pastries", 
-    "price": 8.50, 
+    "price": 1100, 
     "rating": 9.8, 
     "image": "/assets/images/sourdough.jpg" 
 
@@ -223,9 +229,9 @@
   { 
     
   "id": "p2", 
-  "name": "Flaky Butter Croissant", 
+  "name": "Flaky Butter Croissants", 
   "category": "pastries", 
-  "price": 3.75, 
+  "price": 490, 
   "rating": 9.7, 
   "image": "/assets/images/croissant.jpg" 
 },
@@ -234,7 +240,7 @@
     "id": "p3", 
     "name": "Pain au Chocolat", 
     "category": "pastries", 
-    "price": 4.25, 
+    "price": 550, 
     "rating": 9.5, 
     "image": "/assets/images/painauchocolat.jpg" 
   },
@@ -244,7 +250,7 @@
     "id": "p4", 
     "name": "Rosemary Garlic Focaccia", 
     "category": "pastries", 
-    "price": 7.00, 
+    "price": 950, 
     "rating": 9.2, 
     "image": "/assets/images/rosmary.jpg" 
   },
@@ -254,7 +260,7 @@
     "id": "p5", 
     "name": "Almond Frangipane Croissant", 
     "category": "pastries", 
-    "price": 4.75, 
+    "price": 620, 
     "rating": 9.6, 
     "image": "/assets/images/almondcroissant.jpg" 
 
@@ -265,7 +271,7 @@
     "id": "p6", 
     "name": "Cinnamon roll", 
     "category": "pastries", 
-    "price": 5.00, 
+    "price": 700, 
     "rating": 9.1, 
     "image": "/assets/images/cinnamonroll.jpg"
 
@@ -276,7 +282,7 @@
   "id": "p7", 
   "name": "Kalamata Olive Sourdough Flatbread", 
   "category": "pastries", 
-  "price": 9.00, 
+  "price": 1200, 
   "rating": 8.9, 
   "image": "/assets/images/oliveflatbread.jpg" 
 
@@ -287,7 +293,7 @@
   "id": "p8", 
   "name": "Cardamom Buns (Kardemummabullar)", 
   "category": "pastries", 
-  "price": 4.50, 
+  "price": 585, 
   "rating": 9.4, 
   "image": "/assets/images/cardamonbun.jpg" 
 
@@ -298,7 +304,7 @@
   "id": "p9", 
   "name": "Artisanal Multigrain Seeded Loaf", 
   "category": "pastries", 
-  "price": 7.50, 
+  "price": 980, 
   "rating": 8.7, 
   "image": "/assets/images/multigrain.jpg"
 
@@ -309,7 +315,7 @@
     "id": "p10", 
     "name": "Classic French Baguette", 
     "category": "pastries", 
-    "price": 3.50, 
+    "price": 455, 
     "rating": 9.3, 
     "image": "/assets/images/baguette.jpg" 
 
