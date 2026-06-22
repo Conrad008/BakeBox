@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const matchedUser = users.find(user => user.email === emailValue);
 
         if (!matchedUser) {
-            // User doesn't exist
+            
             showInputError(emailInput);
             emailInput.setCustomValidity("No account found with this email.");
             emailInput.reportValidity();
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (matchedUser.password !== passwordValue) {
-            // Password incorrect
+            
             showInputError(passwordInput);
             passwordInput.setCustomValidity("Incorrect password. Try again");
             passwordInput.reportValidity();
