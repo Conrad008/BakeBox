@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeBox | cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primaryPalette: '#fdfbf7',   
+                secondaryPalette: '#2c1e11',
+                thirdPalette: '#d97706',   
+              },
+              fontFamily: {
+                customFont: ['Georgia', 'Times New Roman', 'serif'],
+              }
+            }
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-primaryPalette text-secondaryPalette min-h-screen flex flex-col font-sans">
+    <header class="sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 bg-white shadow-sm border-b border-stone-200">
+        <div class="text-4xl font-bold font-customFont text-secondaryPalette">
+            <a href="index.html">BakeBox<span class="text-thirdPalette">.</span></a>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 font-medium text-stone-600">
+            <a href="home.html" class="hover:text-thirdPalette transition-colors">Home</a>
+            <a href="products.html" class="hover:text-thirdPalette transition-colors">Our products</a>
+            <a href="about.html" class="hover:text-thirdPalette transition-colors">About Us</a>
+            <a href="contact.html" class="hover:text-thirdPalette transition-colors">Find Us</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-6 font-medium">
+            <a href="login.html" class="text-secondaryPalette hover:text-thirdPalette transition-colors">Login</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden text-secondaryPalette p-2 focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div id="mobileMenuDrawer" class="hidden md:hidden border-t border-stone-100 bg-white px-6 py-4 space-y-4 font-medium shadow-inner animate-fadeIn">
+            <a href="home.html" class="block text-stone-600 hover:text-thirdPalette py-2">Home</a>
+            <a href="products.html" class="hover:text-thirdPalette transition-colors">Our products</a>
+            <a href="about.html" class="block text-stone-600 hover:text-thirdPalette py-2 border-t border-stone-50/50">About us</a>
+            <a href="contact.html" class="block text-stone-600 hover:text-thirdPalette py-2 border-t border-stone-50/50">Find Us</a>
+
+            <div class="pt-4 border-t border-stone-100 flex flex-col gap-3">
+                <a href="login.html" class="text-center text-secondaryPalette py-2 hover:text-thirdPalette transition-colors border border-stone-200 rounded-md">Login</a>
+            </div>
+        </div>
+
+    </header>
+    <main class="flex-grow max-w-7xl w-full mx-auto px-6 md:px-12 py-12 animate-fadeIn">
+        <h1 class="text-3xl md:text-4xl font-bold font-customFont mb-8">
+            Your basket
+            <span class="text-thirdPalette">.</span>
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div id="cartItemsContainer" class="lg:col-span-2 space-y-4">
+
+            </div>
+
+            <div class="bg-white border border-stone-200 p-6 rounded-xl shadow-sm space-y-6">
+                <h2 class="text-xl font-bold text-stone-800 border-b border-stone-100 pb-3"> Your Order</h2>
+
+                <div class="space-y-3 text-sm font-medium">
+                    <div class="flex justify-between text-stone-500">
+                        <span>Subtotal</span>
+                        <span id="summarySubtotal">$0.00</span>
+                    </div>
+
+                    <div class="flex justify-between text-stone-500">
+                        <span>Delivery</span>
+                        <span class="text-emerald-600 font-semibold">FREE</span>
+                    </div>
+
+                    <hr class="border-stone-100">
+
+                    <div class="flex justify-between text-lg font-bold text-stone-900 pt-1">
+                        <span>Total Bill</span>
+                        <span id="summaryTotal">KSH 0.00</span>
+                    </div>
+
+                </div>
+
+                <form id="checkoutForm" class="space-y-4 pt-2 hidden">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-stone-400 mt-2">
+                        <i class="fa-regular fa-credit-card mr-2"></i>Card Details
+                    </h3>
+
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-500 mb-1">Cardholder Name</label>
+                            <input type="text" id="cardName" required class="w-full bg-stone-50 border border-stone-200 rounded-lg p-2.5 text-sm focus:ring-1 focus:ring-thirdPalette focus:border-thirdPalette outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-stone-500 mb-1">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx" required class="w-full bg-stone-50 border border-stone-200 rounded-lg p-2.5 text-sm focus:ring-1 focus:ring-thirdPalette focus:border-thirdPalette outline-none">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-stone-500 mb-1">Expiry Date</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/YY" required class="w-full bg-stone-50 border border-stone-200 rounded-lg p-2.5 text-sm focus:ring-1 focus:ring-thirdPalette focus:border-thirdPalette outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-stone-500 mb-1">CVC</label>
+                                <input type="password" id="cardCvc" placeholder="xxx" maxlength="3" required class="w-full bg-stone-50 border border-stone-200 rounded-lg p-2.5 text-sm focus:ring-1 focus:ring-thirdPalette focus:border-thirdPalette outline-none">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <button id="primaryCartBtn" class="w-full bg-thirdPalette hover:bg-amber-700 text-white font-medium py-3.5 rounded-lg transition-all duration-150 shadow-sm flex items-center justify-center gap-2">
+                    Proceed to checkout
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-stone-800 border-t border-stone-200 text-center py-6 text-xs text-stone-500 font-sans">
+        <p>&copy; 2026 BakeBox Delivery Service.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

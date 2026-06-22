@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeBox | Register Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryPallete: '#FDFBF7',
+                        secondaryPallete: '#2D221E',
+                        thirdPallete: '#D97706',
+                    },
+                    fontFamily: {
+                      customFont: ['Georgia', 'Times New Roman', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-primaryPallete font-customFont min-h-screen flex items-center justify-center p-4 select-none">
+    <div class="bg-white/70 backdrop-blur-md border border-white/30 p-8 rounded-2xl shadow-xl w-full max-w-md transition-all duration-300">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-secondaryPallete tracking-tight">Join <span class="text-thirdPallete">BakeBox</span></h1>
+            <p class="text-sm text-secondaryPallete/70 mt-2 font-sans font-medium">Create an account to order fresh artisan bakes</p>
+        </div>
+
+        <form id="registerForm" class="space-y-5">
+            <div>
+                <label for="fullName" class="block text-sm font-semibold text-secondaryPallete mb-1">Enter Your Name</label>
+                <input type="text" id="fullName" class="w-full font-sans px-4 py-2.5 rounded-lg border border-secondaryPallete/20 bg-white/50 focus:outline-none focus:border-thirdPallete focus:ring-1 focus:ring-thirdPallete text-secondaryPallete transition" placeholder="John Doe" required>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-semibold text-secondaryPallete mb-1">Enter Your Email <Address></Address></label>
+                <input type="email" id="email" class="w-full font-sans px-4 py-2.5 rounded-lg border border-secondaryPallete/20 bg-white/50 focus:outline-none focus:border-thirdPallete focus:ring-1 focus:ring-thirdPallete text-secondaryPallete transition" placeholder="you@example.com" required>
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-semibold text-secondaryPallete mb-1">Password</label>
+                <div class=" relative">
+                   <input type="password" id="password" class="w-full font-sans px-4 pr-12 py-2.5 rounded-lg border border-secondaryPallete/20 bg-white/50 focus:outline-none focus:border-thirdPallete focus:ring-1 focus:ring-thirdPallete text-secondaryPallete transition" placeholder="Enter your password" required>
+                   <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-4 flex items-center text-secondaryPallete/50 hover:text-secondaryPallete focus:outline-none" aria-label="Toggle password visibility">
+                      <i id="eyeIcon" class="fa-regular fa-eye text-base"></i>
+                   </button>
+                </div>
+                
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-semibold text-secondaryPallete mb-1">Phone Number</label>
+                <input type="tel" id="phone" class="w-full font-sans px-4 py-2.5 rounded-lg border border-secondaryPallete/20 bg-white/50 focus:outline-none focus:border-thirdPallete focus:ring-1 focus:ring-thirdPallete text-secondaryPallete transition" placeholder="e.g., 0712345678" required>
+            </div>
+
+            <p id="formSuccess" class="text-sm font-customFont text-green-600 font-semibold text-center hidden"></p>
+
+            <button type="submit" class="w-full bg-secondaryPallete hover:bg-secondaryPallete/90 text-primaryPallete font-sans font-semibold py-3 rounded-lg shadow-md hover:shadow-lg transition duration-200 mt-2">
+                Sign Up
+            </button>
+
+        </form>
+
+        <p class="text-sm font-customFont text-center text-secondaryPallete/60 mt-6">
+            Already have an account?
+            <a href="login.html" class="text-thirdPallete font-semibold">Log In</a>
+        </p>
+
+    </div>
+
+    <script src="js/register.js"></script>
+    
+</body>
+</html>

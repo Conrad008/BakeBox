@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function renderCart (){
-    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || {};
+    const cart = JSON.parse(localStorage.getItem('BakeBox_Cart')) || [];
     const container = document.getElementById('cartItemsContainer');
     const badge = document.getElementById('cartCountBadge')
 
